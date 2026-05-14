@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hud" aria-label="Game status">
+        <h1>Neon Snake</h1>
+        <div class="scores">
+          <p>Score <span id="score">0</span></p>
+          <p>Best <span id="best-score">0</span></p>
+        </div>
+        <p class="status" id="status">Press Enter to start</p>
+      </section>
+
+      <section class="board-wrap">
+        <canvas
+          id="game"
+          width="500"
+          height="500"
+          aria-label="Snake game board"
+          role="img"
+        ></canvas>
+      </section>
+
+      <section class="controls" aria-label="Controls">
+        <p>Arrows / WASD to move</p>
+        <p>Enter to start or restart</p>
+        <p>Space to pause</p>
+      </section>
+
+      <section class="touch-controls" aria-label="Touch controls">
+        <button data-dir="up" aria-label="Move up">▲</button>
+        <div>
+          <button data-dir="left" aria-label="Move left">◀</button>
+          <button data-dir="down" aria-label="Move down">▼</button>
+          <button data-dir="right" aria-label="Move right">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
